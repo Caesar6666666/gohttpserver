@@ -2,7 +2,7 @@
 ## 项目介绍
 本项目基于[gohttpserver](https://github.com/codeskyblue/gohttpserver)进行修改，实现了一个简单的文件管理系统，支持文件上传、下载、删除、重命名、移动、复制、分享、搜索等功能（具体使用方法参考[gohttpserver](gohttpserver.md)文档介绍）。前端页面修改了标题和banner栏功能，使用监控功能替换了banner的二维码页面（监控功能基于`python`修改实现）并修改了对话框样式和监控图像匹配。
 ## 自定义功能
-静态资源位于[assets](./assets/)目录下，其中[index.html](./assets/index.html)为静态页面入口，几个由"[[ ]]"括号对包裹的变量会在gohttpserver的返回结果中被替换成[main.go](./main.go)中定义的变量值，同时删除注释。文件服务器提供功能开关（例如`auth, upload, delete`）可以通过gohttpserver的命令行参数进行修改，具体参考[gohttpserver](gohttpserver.md)文档介绍。
+静态资源位于[assets](./assets/)目录下，其中[index.html](./assets/index.html)为静态页面入口，几个由"[[ ]]"括号对包裹的变量会在gohttpserver的返回结果中被替换成[main.go](./main.go)中定义的变量值，同时删除注释。文件服务器提供功能开关（例如`auth, upload, delete`）可以通过`gohttpserver`的命令行参数进行修改，具体参考[gohttpserver](gohttpserver.md)文档介绍。
 ## Tips
 ### 项目部署
 本地测试编译参考[gohttpserver](gohttpserver.md)文档：
