@@ -98,7 +98,7 @@ func parseFlags() error {
 	gcfg.PlistProxy = defaultPlistProxy
 	gcfg.Auth.OpenID = defaultOpenID
 	gcfg.GoogleTrackerID = "UA-81205425-2"
-	gcfg.Title = "Go HTTP File Server"
+	gcfg.Title = "智能存储平台"
 
 	kingpin.HelpFlag.Short('h')
 	kingpin.Version(versionMessage())
