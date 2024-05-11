@@ -32,9 +32,9 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
           <ul class="nav navbar-nav">
             <li class="hidden-xs">
-              <a href="javascript:void(0)" v-on:click='genQrcode()'>
-                View in Phone
-                <span class="glyphicon glyphicon-qrcode"></span>
+              <a href="javascript:void(0)" data-toggle="modal" data-target="#monitor-modal">
+                Monitor
+                <i class="fa fa-video-camera"></i>
               </a>
             </li>
             [[if eq .AuthType "openid"]]
@@ -237,6 +237,25 @@
           </div>
         </div>
       </div>
+      <!-- Monitor modal-->
+      <div id="monitor-modal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" style="width: 1000px;">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title">
+                <span id="monitor-title">监控画面</span>
+              </h4>
+            </div>
+            <div class="modal-body">
+              <img id="capture" src="http://ssh.thelsy.top:5000/video_feed0" width="970px"></img>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
       <!-- File info modal -->
       <div id="file-info-modal" class="modal fade" tabindex="-1" role="dialog">
         <div class="modal-dialog">
@@ -255,9 +274,7 @@
       </div>
     </div>
     <div class="col-md-12">
-      <div id="footer" class="pull-right" style="margin: 2em 1em">
-        <a href="https://github.com/codeskyblue/gohttpserver">gohttpserver ({{version}})</a>, by <a href="https://github.com/codeskyblue">codeskyblue</a>.
-      </div>
+      <p></p>
     </div>
   </div>
   <script>
